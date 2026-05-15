@@ -331,6 +331,18 @@
 
 			</div>
 
+		<script>
+		document.querySelectorAll('.folder').forEach(folder => {
+			folder.addEventListener('toggle', () => {
+				if (!folder.open) {
+					folder.querySelectorAll('.mag-group').forEach(mag => {
+						mag.open = false;
+					});
+				}
+			});
+		});
+		</script>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
