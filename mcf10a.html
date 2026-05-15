@@ -50,25 +50,27 @@
 									.folder[open] { flex: 5; background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
 									.folder > summary { cursor: pointer; padding: 1em 1.2em; font-size: 1.1em; font-weight: 600; color: #444; text-align: center; list-style: none; user-select: none; letter-spacing: 0.01em; }
 									.folder > summary::-webkit-details-marker { display: none; }
-									.folder > summary:hover { color: #2980b9; }
-									.folder[open] > summary { border-bottom: 1px solid #e0e0e0; background: #f5f7fa; }
+									.folder > summary:hover { color: #f56a6a; }
+									.folder[open] > summary { border-bottom: 1px solid #e0e0e0; background: #fdf5f5; }
 									.folder-content { padding: 1em 1.5em 1.5em; }
 									.mag-group { margin: 0.8em 0; border-top: 1px solid #e0e0e0; }
 									.mag-group:first-child { border-top: none; }
-									.mag-group > summary { cursor: pointer; padding: 0.8em 0.2em; color: #2980b9; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; list-style: none; user-select: none; }
+									.mag-group > summary { cursor: pointer; padding: 0.8em 0.2em; color: #f56a6a; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; list-style: none; user-select: none; }
 									.mag-group > summary::-webkit-details-marker { display: none; }
 									.mag-group > summary::before { content: "▸"; display: inline-block; margin-right: 0.5em; color: #888; transition: transform 0.2s; }
 									.mag-group[open] > summary::before { transform: rotate(90deg); }
-									.mag-group > summary:hover { color: #1a5a85; }
+									.mag-group > summary:hover { color: #d04a4a; }
 									.fld-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.8em; margin-top: 0.5em; }
 									.videos .fld-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1em; }
 									.fld-card { padding: 0.9em 1em; background: #fafafa; border: 1px solid #eee; border-radius: 6px; transition: border-color 0.15s, box-shadow 0.15s; }
-									.fld-card:hover { border-color: #2980b9; box-shadow: 0 2px 6px rgba(41,128,185,0.08); }
+									.fld-card:hover { border-color: #f56a6a; box-shadow: 0 2px 6px rgba(245,106,106,0.12); }
 									.fld-card h3 { font-size: 0.98em; font-weight: 600; color: #222; margin: 0 0 0.5em; text-align: center; letter-spacing: 0.02em; }
 									.fld-card p { margin: 0.25em 0; font-size: 0.88em; color: #555; line-height: 1.55; }
-									.fld-card a { color: #2980b9; text-decoration: none; padding: 0 0.15em; font-weight: 500; }
+									.fld-card a { color: #f56a6a; text-decoration: none; padding: 0 0.15em; font-weight: 500; }
 									.fld-card a:hover { text-decoration: underline; }
 									.fld-card strong { color: #333; font-weight: 600; }
+									/* Center content for Annotation and Raw images cards */
+									.annotation .fld-card p, .raw-images .fld-card p { text-align: center; }
 									@media (max-width: 800px) { .folder-list { flex-direction: column; } .folder[open] { flex: 1; } }
 									</style>
 
@@ -77,20 +79,6 @@
 											<summary>Annotation</summary>
 											<div class="folder-content">
 												<details class="mag-group" open>
-													<summary>20× magnification</summary>
-													<div class="fld-grid">
-														<div class="fld-card"><h3>FLD_102</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_103</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_104</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_106</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_107</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_108</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_110</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_111</h3><p><a href="">xml</a></p></div>
-														<div class="fld-card"><h3>FLD_113</h3><p><a href="">xml</a></p></div>
-													</div>
-												</details>
-												<details class="mag-group">
 													<summary>10× magnification</summary>
 													<div class="fld-grid">
 														<div class="fld-card"><h3>FLD_3</h3><p><a href="">xml</a></p></div>
@@ -104,80 +92,26 @@
 														<div class="fld-card"><h3>FLD_11</h3><p><a href="">xml</a></p></div>
 													</div>
 												</details>
+												<details class="mag-group">
+													<summary>20× magnification</summary>
+													<div class="fld-grid">
+														<div class="fld-card"><h3>FLD_102</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_103</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_104</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_106</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_107</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_108</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_110</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_111</h3><p><a href="">xml</a></p></div>
+														<div class="fld-card"><h3>FLD_113</h3><p><a href="">xml</a></p></div>
+													</div>
+												</details>
 											</div>
 										</details>
 										<details class="folder videos">
 											<summary>Videos</summary>
 											<div class="folder-content">
 												<details class="mag-group" open>
-													<summary>20× magnification</summary>
-													<div class="fld-grid">
-														<div class="fld-card">
-															<h3>FLD_102</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_103</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_104</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_106</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_107</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_108</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_110</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_111</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-														<div class="fld-card">
-															<h3>FLD_113</h3>
-															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
-														</div>
-													</div>
-												</details>
-												<details class="mag-group">
 													<summary>10× magnification</summary>
 													<div class="fld-grid">
 														<div class="fld-card">
@@ -245,26 +179,80 @@
 														</div>
 													</div>
 												</details>
+												<details class="mag-group">
+													<summary>20× magnification</summary>
+													<div class="fld-grid">
+														<div class="fld-card">
+															<h3>FLD_102</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_103</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_104</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_106</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_107</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_108</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_110</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_111</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+														<div class="fld-card">
+															<h3>FLD_113</h3>
+															<p><strong>GAP 1:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 2:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 4:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+															<p><strong>GAP 8:</strong> <a href="">pc</a> | <a href="">rfp</a> | <a href="">annotation</a></p>
+														</div>
+													</div>
+												</details>
 											</div>
 										</details>
 										<details class="folder raw-images">
 											<summary>Raw images</summary>
 											<div class="folder-content">
 												<details class="mag-group" open>
-													<summary>20× magnification</summary>
-													<div class="fld-grid">
-														<div class="fld-card"><h3>FLD_102</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_103</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_104</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_106</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_107</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_108</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_110</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_111</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_113</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
-													</div>
-												</details>
-												<details class="mag-group">
 													<summary>10× magnification</summary>
 													<div class="fld-grid">
 														<div class="fld-card"><h3>FLD_3</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
@@ -276,6 +264,20 @@
 														<div class="fld-card"><h3>FLD_9</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 														<div class="fld-card"><h3>FLD_10</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 														<div class="fld-card"><h3>FLD_11</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													</div>
+												</details>
+												<details class="mag-group">
+													<summary>20× magnification</summary>
+													<div class="fld-grid">
+														<div class="fld-card"><h3>FLD_102</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_103</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_104</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_106</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_107</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_108</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_110</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_111</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_113</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 													</div>
 												</details>
 											</div>
