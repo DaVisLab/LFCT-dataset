@@ -48,18 +48,17 @@
 									.folder-list { margin: 2em 0; display: flex; flex-direction: row; gap: 1em; align-items: flex-start; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 									.folder { flex: 1; min-width: 0; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; transition: flex 0.3s ease, box-shadow 0.2s, background 0.2s; overflow: hidden; }
 									.folder[open] { flex: 5; background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-									.folder > summary { cursor: pointer; padding: 1em 1.2em; font-size: 1.1em; font-weight: 600; color: #444; text-align: center; list-style: none; user-select: none; letter-spacing: 0.01em; }
+									.folder > summary { cursor: pointer; padding: 1em 1.2em 0.8em; font-size: 1.1em; font-weight: 600; color: #444; text-align: center; list-style: none; user-select: none; letter-spacing: 0.01em; border-bottom: 3px solid #f56a6a; }
 									.folder > summary::-webkit-details-marker { display: none; }
 									.folder > summary:hover { color: #f56a6a; }
-									.folder[open] > summary { border-bottom: 1px solid #e0e0e0; background: #fdf5f5; }
-									.folder-content { padding: 1em 1.5em 1.5em; }
-									.mag-group { margin: 0.8em 0; border-top: 1px solid #e0e0e0; }
-									.mag-group:first-child { border-top: none; }
-									.mag-group > summary { cursor: pointer; padding: 0.8em 0.2em; color: #f56a6a; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; list-style: none; user-select: none; }
+									.folder[open] > summary { background: #fff; }
+									.folder-content { padding: 0.5em 1.5em 1.5em; }
+									.mag-group { margin: 0.5em 0; }
+									.mag-group > summary { cursor: pointer; padding: 0.7em 0.2em; color: #555; font-size: 0.95em; font-weight: 600; list-style: none; user-select: none; }
 									.mag-group > summary::-webkit-details-marker { display: none; }
-									.mag-group > summary::before { content: "▸"; display: inline-block; margin-right: 0.5em; color: #888; transition: transform 0.2s; }
+									.mag-group > summary::before { content: "▸"; display: inline-block; margin-right: 0.5em; color: #888; transition: transform 0.2s; font-size: 0.9em; }
 									.mag-group[open] > summary::before { transform: rotate(90deg); }
-									.mag-group > summary:hover { color: #d04a4a; }
+									.mag-group > summary:hover { color: #f56a6a; }
 									.fld-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.8em; margin-top: 0.5em; }
 									.videos .fld-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1em; }
 									.fld-card { padding: 0.9em 1em; background: #fafafa; border: 1px solid #eee; border-radius: 6px; transition: border-color 0.15s, box-shadow 0.15s; }
@@ -69,8 +68,7 @@
 									.fld-card a { color: #f56a6a; text-decoration: none; padding: 0 0.15em; font-weight: 500; }
 									.fld-card a:hover { text-decoration: underline; }
 									.fld-card strong { color: #333; font-weight: 600; }
-									/* Center content for Annotation and Raw images cards */
-									.annotation .fld-card p, .raw-images .fld-card p { text-align: center; }
+									.annotation .fld-card p, .images .fld-card p { text-align: center; }
 									@media (max-width: 800px) { .folder-list { flex-direction: column; } .folder[open] { flex: 1; } }
 									</style>
 
@@ -249,8 +247,8 @@
 												</details>
 											</div>
 										</details>
-										<details class="folder raw-images">
-											<summary>Raw images</summary>
+										<details class="folder images">
+											<summary>Images</summary>
 											<div class="folder-content">
 												<details class="mag-group" open>
 													<summary>10× magnification</summary>
