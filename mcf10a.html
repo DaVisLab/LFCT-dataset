@@ -31,176 +31,236 @@
 							</header>
 
 							<!-- Content -->
-								<!-- Section -->
 								<section>
 									<header class="major">
 										<h2>Cell line - MCF10A</h2>
 									</header>
 									<p>MCF10A is a non-transformed epithelial cell line. Images for this cell line have been generated with a BioTek Cytation5 under environmental control (37 &#8451; and 5% CO<sub>2</sub>) in one field of view. The cells were maintained in a BioTek Biospa8 automated incubator (37 &#8451; and 5% CO<sub>2</sub>) during the interval period of imaging. All images have the nuclear reporter H2b-mRuby.</p>
-    
+
 									<p>The cell line was seeded onto 12-well plates (Corning Falcon #353043). The seeding density was 2-3&times;10<sup>4</sup> cells/well. Cells were incubated for 16 hours at 37 &#8451; and 5% CO<sub>2</sub>, then the medium was changed to remove dead cells and further incubated for 2 hours. Images were acquired at 4X, 10X, and 20X magnifications with the RFP channel (531/593) to visualize red fluorescent protein, mRuby, as well as the phase contrast channel with 10-15 minute intervals for three days.</p>
-									
-									<p>The MCF10A cells H2b-mRuby were cultured in DMEM/F12 (Gibco #11330-032) supplemented with 5% horse serum (Gibco #16050122), 20 ng/mL EGF (PeproTech #AF100-15), 0.5 mg/mL Hydrocortisone (Sigma #H0888), 100 ng/mL cholera toxin (Sigma #C8052), and 10 &micro;g/mL insulin (Sigma #I-1882) containing hygromycin (Millipore Sigma #H3274-100MG) (1.5 &micro;g/mL) and puromycin (STEMCELL #73342) (0.1 &micro;g/mL). HEK293T cells expressing H2b-mRuby were cultured in DMEM (Gibco #10313021) supplemented with 10% FBS (V/V) (Gibco #10082139), 2mM L-glutamine (Corning #25-005-CI) containing 0.5 &micro;g/mL puromycin (STEMCELL #73342). For trypsinization, 0.05% trypsin, 0.53 mM EDTA (Corning #25-052-CI) was used.
+
+									<p>The MCF10A cells H2b-mRuby were cultured in DMEM/F12 (Gibco #11330-032) supplemented with 5% horse serum (Gibco #16050122), 20 ng/mL EGF (PeproTech #AF100-15), 0.5 mg/mL Hydrocortisone (Sigma #H0888), 100 ng/mL cholera toxin (Sigma #C8052), and 10 &micro;g/mL insulin (Sigma #I-1882) containing hygromycin (Millipore Sigma #H3274-100MG) (1.5 &micro;g/mL) and puromycin (STEMCELL #73342) (0.1 &micro;g/mL). HEK293T cells expressing H2b-mRuby were cultured in DMEM (Gibco #10313021) supplemented with 10% FBS (V/V) (Gibco #10082139), 2mM L-glutamine (Corning #25-005-CI) containing 0.5 &micro;g/mL puromycin (STEMCELL #73342). For trypsinization, 0.05% trypsin, 0.53 mM EDTA (Corning #25-052-CI) was used.</p>
 
 									<style>
 									.folder-list { margin: 2em 0; display: flex; flex-direction: row; gap: 1em; align-items: flex-start; }
-									.folder { flex: 1; min-width: 0; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; transition: box-shadow 0.2s, background 0.2s; }
-									.folder[open] { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-									.folder > summary { cursor: pointer; padding: 1em 1.5em; font-size: 1.25em; font-weight: 600; color: #444; text-align: center; list-style: none; user-select: none; }
+									.folder { flex: 1; min-width: 0; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; transition: flex 0.3s ease, box-shadow 0.2s, background 0.2s; overflow: hidden; }
+									.folder[open] { flex: 5; background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+									.folder > summary { cursor: pointer; padding: 1em 1.2em; font-size: 1.1em; font-weight: 600; color: #444; text-align: center; list-style: none; user-select: none; }
 									.folder > summary::-webkit-details-marker { display: none; }
 									.folder > summary:hover { color: #2980b9; }
-									.folder > h4 { margin: 1em 1.2em 0.3em 1.2em; color: #999; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
-									.folder > h5 { margin: 0.7em 1.2em 0.2em 1.5em; color: #333; font-size: 1em; font-weight: 600; }
-									.folder > p { margin: 0.2em 1.2em 0.2em 1.5em; color: #555; font-size: 0.9em; line-height: 1.5; word-break: break-word; }
-									.folder a { color: #2980b9; text-decoration: none; padding: 0 0.1em; }
-									.folder a:hover { text-decoration: underline; }
-									@media (max-width: 800px) { .folder-list { flex-direction: column; } }
+									.folder[open] > summary { border-bottom: 1px solid #e0e0e0; background: #f5f7fa; }
+									.folder-content { padding: 1em 1.5em 1.5em; }
+									.folder-content h4 { margin: 1.2em 0 0.8em; color: #2980b9; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.12em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4em; font-weight: 700; }
+									.fld-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.8em; }
+									.videos .fld-grid { grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1em; }
+									.fld-card { padding: 0.8em 1em; background: #fafafa; border: 1px solid #eee; border-radius: 6px; transition: border-color 0.15s; }
+									.fld-card:hover { border-color: #2980b9; }
+									.fld-card h3 { font-size: 0.95em; font-weight: 700; color: #333; margin: 0 0 0.4em; letter-spacing: 0.02em; }
+									.fld-card p { margin: 0.25em 0; font-size: 0.88em; color: #555; line-height: 1.5; }
+									.fld-card a { color: #2980b9; text-decoration: none; padding: 0 0.15em; }
+									.fld-card a:hover { text-decoration: underline; }
+									.fld-card strong { color: #333; font-weight: 600; }
+									@media (max-width: 800px) { .folder-list { flex-direction: column; } .folder[open] { flex: 1; } }
 									</style>
 
 									<div class="folder-list">
-										<details class="folder">
+										<details class="folder annotation">
 											<summary>Annotation</summary>
-											<h4>20×</h4>
-											<p>FLD_102: <a href="https://clemson.box.com/s/2zldo3t1ajauu7cl7dn5s3coeafwgnig">xml</a></p>
-											<p>FLD_103: <a href="">xml</a></p>
-											<p>FLD_104: <a href="">xml</a></p>
-											<p>FLD_106: <a href="">xml</a></p>
-											<p>FLD_107: <a href="">xml</a></p>
-											<p>FLD_108: <a href="">xml</a></p>
-											<p>FLD_110: <a href="">xml</a></p>
-											<p>FLD_111: <a href="">xml</a></p>
-											<p>FLD_113: <a href="">xml</a></p>
-											<h4>10×</h4>
-											<p>FLD_3: <a href="">xml</a></p>
-											<p>FLD_4: <a href="">xml</a></p>
-											<p>FLD_5: <a href="">xml</a></p>
-											<p>FLD_6: <a href="">xml</a></p>
-											<p>FLD_7: <a href="">xml</a></p>
-											<p>FLD_8: <a href="">xml</a></p>
-											<p>FLD_9: <a href="">xml</a></p>
-											<p>FLD_10: <a href="">xml</a></p>
-											<p>FLD_11: <a href="">xml</a></p>
+											<div class="folder-content">
+												<h4>20× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card"><h3>FLD_102</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_103</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_104</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_106</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_107</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_108</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_110</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_111</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_113</h3><p><a href="">xml</a></p></div>
+												</div>
+												<h4>10× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card"><h3>FLD_3</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_4</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_5</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_6</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_7</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_8</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_9</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_10</h3><p><a href="">xml</a></p></div>
+													<div class="fld-card"><h3>FLD_11</h3><p><a href="">xml</a></p></div>
+												</div>
+											</div>
 										</details>
-										<details class="folder">
+										<details class="folder videos">
 											<summary>Videos</summary>
-											<h4>20×</h4>
-											<h5>FLD_102</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_103</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_104</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_106</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_107</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_108</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_110</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_111</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_113</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h4>10×</h4>
-											<h5>FLD_3</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_4</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_5</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_6</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_7</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_8</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_9</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_10</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<h5>FLD_11</h5>
-											<p>GAP 1: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 2: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 4: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
-											<p>GAP 8: <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+											<div class="folder-content">
+												<h4>20× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card">
+														<h3>FLD_102</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_103</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_104</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_106</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_107</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_108</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_110</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_111</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_113</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+												</div>
+												<h4>10× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card">
+														<h3>FLD_3</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_4</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_5</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_6</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_7</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_8</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_9</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_10</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+													<div class="fld-card">
+														<h3>FLD_11</h3>
+														<p><strong>GAP 1:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 2:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 4:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+														<p><strong>GAP 8:</strong> <a href="">segmentation</a> | <a href="">annotation</a> | <a href="">pc</a> | <a href="">rfp</a> | <a href="">rfp_pc</a></p>
+													</div>
+												</div>
+											</div>
 										</details>
-										<details class="folder">
+										<details class="folder raw-images">
 											<summary>Raw images</summary>
-											<h4>20×</h4>
-											<p>FLD_102: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_103: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_104: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_106: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_107: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_108: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_110: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_111: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_113: <a href="">pc</a> | <a href="">rfp</a></p>
-											<h4>10×</h4>
-											<p>FLD_3: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_4: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_5: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_6: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_7: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_8: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_9: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_10: <a href="">pc</a> | <a href="">rfp</a></p>
-											<p>FLD_11: <a href="">pc</a> | <a href="">rfp</a></p>
+											<div class="folder-content">
+												<h4>20× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card"><h3>FLD_102</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_103</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_104</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_106</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_107</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_108</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_110</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_111</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_113</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+												</div>
+												<h4>10× magnification</h4>
+												<div class="fld-grid">
+													<div class="fld-card"><h3>FLD_3</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_4</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_5</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_6</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_7</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_8</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_9</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_10</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+													<div class="fld-card"><h3>FLD_11</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+												</div>
+											</div>
 										</details>
 									</div>
-									
+
 								</section>
 
 						</div>
@@ -217,7 +277,6 @@
 								</header>
 								<ul>
 									<li><a href="index.html">Homepage</a></li>
-									
 									<li>
 										<span class="opener">Datasets</span>
 										<ul>
@@ -226,11 +285,8 @@
 										</ul>
 									</li>
 									<li><a href="about.html">About</a></li>
-									
 								</ul>
 							</nav>
-
-						
 
 						<!-- Section -->
 							<section>
@@ -243,7 +299,6 @@
 									Clemson, SC 29631</li>
 								</ul>
 							</section>
-
 
 							<!-- Footer -->
 							<footer id="footer">
