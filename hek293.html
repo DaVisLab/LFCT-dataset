@@ -54,6 +54,47 @@
 									<p>At 96 hours post-electroporation, when confluency reached to 90%, cells were selected with puromycin (1 &micro;g/mL, STEMCELL #73342) for three days until all negative control cells were dead, and those sample cells reached 90% confluency. Stable H2B-mRuby expressing cells were maintained in full growth medium with 0.5 &micro;g/mL puromycin.</p>
 
 									<style>
+									.preview-wrap { margin: 2.5em auto 2em; max-width: 850px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+									.preview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5em; }
+									.preview-tile { border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; background: #fafafa; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s; }
+									.preview-tile:hover { transform: translateY(-3px); border-color: #f56a6a; box-shadow: 0 8px 24px rgba(245,106,106,0.18); }
+									.preview-channels { display: flex; height: 180px; background: #000; }
+									.preview-channels > div { width: 50%; height: 100%; overflow: hidden; }
+									.preview-channels img { width: 100%; height: 100%; object-fit: cover; display: block; }
+									.preview-info { padding: 1em 1.2em; background: #fff; border-top: 1px solid #eee; text-align: center; }
+									.preview-name { font-size: 1.05em; font-weight: 700; color: #222; margin: 0; letter-spacing: 0.02em; }
+									.preview-meta { font-size: 0.85em; color: #777; margin: 0.2em 0 0; font-weight: 500; }
+									.preview-caption { text-align: center; margin: 1.5em auto 0; max-width: 800px; font-size: 0.85em; color: #888; font-style: italic; line-height: 1.6; }
+									@media (max-width: 800px) { .preview-grid { grid-template-columns: 1fr; } .preview-channels { height: 140px; } }
+									</style>
+
+									<div class="preview-wrap">
+										<div class="preview-grid">
+											<div class="preview-tile">
+												<div class="preview-channels">
+													<div><img src="images/FLD_2_hek293_10_pc.jpg" alt="FLD_2 phase contrast 10×"></div>
+													<div><img src="images/FLD_2_hek293_10_rfp.jpg" alt="FLD_2 RFP 10×"></div>
+												</div>
+												<div class="preview-info">
+													<p class="preview-name">FLD_2</p>
+													<p class="preview-meta">10× magnification</p>
+												</div>
+											</div>
+											<div class="preview-tile">
+												<div class="preview-channels">
+													<div><img src="images/FLD_2_hek293_20_pc.jpg" alt="FLD_2 phase contrast 20×"></div>
+													<div><img src="images/FLD_2_hek293_20_rfp.jpg" alt="FLD_2 RFP 20×"></div>
+												</div>
+												<div class="preview-info">
+													<p class="preview-name">FLD_2</p>
+													<p class="preview-meta">20× magnification</p>
+												</div>
+											</div>
+										</div>
+										<p class="preview-caption">Example sequences from the HEK293T dataset. Left: phase contrast. Right: nuclear fluorescence (RFP).</p>
+									</div>
+
+									<style>
 									.folder-list { margin: 2em 0; display: flex; flex-direction: row; gap: 1em; align-items: flex-start; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 									.folder { flex: 1; min-width: 0; border: 1px solid #e0e0e0; border-radius: 8px; background: #fafafa; transition: flex 0.3s ease, box-shadow 0.2s, background 0.2s; overflow: hidden; }
 									.folder[open] { flex: 5; background: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
@@ -271,15 +312,15 @@
 								</header>
 								<ul>
 									<li><a href="index.html">Homepage</a></li>
-								<li>
-    								<span>Datasets</span>
-    								<ul style="display: block;">
-        								<li><a href="mcf10a.html">MCF10a</a></li>
-        								<li><a href="hek293.html">HEK293</a></li>
-        								<li><a href="mdamb.html">MDA-MB-231</a></li>
-       		 							<li><a href="u87.html">U87</a></li>
-    								</ul>
-								</li>
+									<li>
+										<span class="opener">Datasets</span>
+										<ul>
+											<li><a href="mcf10a.html">MCF10a</a></li>
+											<li><a href="hek293.html">HEK293</a></li>
+											<li><a href="mdamb.html">MDA-MB-231</a></li>
+											<li><a href="u87.html">U87</a></li>
+										</ul>
+									</li>
 									<li><a href="about.html">About</a></li>
 								</ul>
 							</nav>
