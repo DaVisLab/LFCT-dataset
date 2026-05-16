@@ -38,6 +38,50 @@
 									<header class="major">
 										<h2>Cell line - MCF10A</h2>
 									</header>
+
+									<style>
+									.banner-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 1.5em 0 1em; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+									.banner-card { border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; transition: border-color 0.15s, box-shadow 0.15s; background: #fafafa; }
+									.banner-card:hover { border-color: #f56a6a; box-shadow: 0 2px 6px rgba(245,106,106,0.12); }
+									.banner-imgs { display: flex; height: 100px; background: #000; }
+									.banner-imgs img { width: 50%; height: 100%; object-fit: cover; display: block; }
+									.banner-label { padding: 6px 8px; text-align: center; font-size: 0.85em; font-weight: 600; color: #333; background: #fff; border-top: 1px solid #eee; }
+									.banner-caption { font-size: 0.78em; color: #888; text-align: center; margin: 0 0 1.5em; font-style: italic; font-family: 'Inter', -apple-system, sans-serif; }
+									@media (max-width: 800px) { .banner-row { grid-template-columns: repeat(2, 1fr); } }
+									</style>
+
+									<div class="banner-row">
+										<div class="banner-card">
+											<div class="banner-imgs">
+												<img src="" alt="FLD_2 PC 10x">
+												<img src="" alt="FLD_2 RFP 10x">
+											</div>
+											<div class="banner-label">FLD_2 · 10×</div>
+										</div>
+										<div class="banner-card">
+											<div class="banner-imgs">
+												<img src="" alt="FLD_2 PC 20x">
+												<img src="" alt="FLD_2 RFP 20x">
+											</div>
+											<div class="banner-label">FLD_2 · 20×</div>
+										</div>
+										<div class="banner-card">
+											<div class="banner-imgs">
+												<img src="" alt="FLD_3 PC 10x">
+												<img src="" alt="FLD_3 RFP 10x">
+											</div>
+											<div class="banner-label">FLD_3 · 10×</div>
+										</div>
+										<div class="banner-card">
+											<div class="banner-imgs">
+												<img src="" alt="FLD_3 PC 20x">
+												<img src="" alt="FLD_3 RFP 20x">
+											</div>
+											<div class="banner-label">FLD_3 · 20×</div>
+										</div>
+									</div>
+									<p class="banner-caption">Phase contrast (left) and RFP nuclear fluorescence (right) for each sequence.</p>
+
 									<p>MCF10A is a non-transformed epithelial cell line. Images for this cell line have been generated with a BioTek Cytation5 under environmental control (37 &#8451; and 5% CO<sub>2</sub>) in one field of view. The cells were maintained in a BioTek Biospa8 automated incubator (37 &#8451; and 5% CO<sub>2</sub>) during the interval period of imaging. All images have the nuclear reporter H2b-mRuby.</p>
 
 									<p>The cell line was seeded onto 12-well plates (Corning Falcon #353043). The seeding density was 2-3&times;10<sup>4</sup> cells/well. Cells were incubated for 16 hours at 37 &#8451; and 5% CO<sub>2</sub>, then the medium was changed to remove dead cells and further incubated for 2 hours. Images were acquired at 4X, 10X, and 20X magnifications with the RFP channel (531/593) to visualize red fluorescent protein, mRuby, as well as the phase contrast channel with 10-15 minute intervals for three days.</p>
@@ -93,8 +137,8 @@
 												<details class="mag-group" name="images-mag">
 													<summary>20× magnification</summary>
 													<div class="fld-grid">
-														<div class="fld-card"><h3>FLD_102</h3><p><a href="https://clemson.box.com/s/aqhm22hiaz92fg6qh4j040ozstebnl2r">pc</a> | <a href="https://clemson.box.com/s/uf7q29dddgj1qqd11wver5oaoo781wtn">rfp</a></p></div>
-														<div class="fld-card"><h3>FLD_103</h3><p><a href="https://clemson.box.com/s/aub3zlzssy2kz685k56434ln090yy6q4">pc</a> | <a href="https://clemson.box.com/s/d693ht0fbkfxvshukfnt0az5u6wj6ecw">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_102</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
+														<div class="fld-card"><h3>FLD_103</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 														<div class="fld-card"><h3>FLD_104</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 														<div class="fld-card"><h3>FLD_106</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
 														<div class="fld-card"><h3>FLD_107</h3><p><a href="">pc</a> | <a href="">rfp</a></p></div>
@@ -298,15 +342,15 @@
 								</header>
 								<ul>
 									<li><a href="index.html">Homepage</a></li>
-								<li>
-    								<span>Datasets</span>
-    								<ul style="display: block;">
-        								<li><a href="mcf10a.html">MCF10a</a></li>
-        								<li><a href="hek293.html">HEK293</a></li>
-        								<li><a href="mdamb.html">MDA-MB-231</a></li>
-        								<li><a href="u87.html">U87</a></li>
-    								</ul>
-								</li>
+									<li>
+										<span class="opener">Datasets</span>
+										<ul>
+											<li><a href="mcf10a.html">MCF10a</a></li>
+											<li><a href="hek293.html">HEK293</a></li>
+											<li><a href="mdamb.html">MDA-MB-231</a></li>
+											<li><a href="u87.html">U87</a></li>
+										</ul>
+									</li>
 									<li><a href="about.html">About</a></li>
 								</ul>
 							</nav>
